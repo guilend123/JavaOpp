@@ -1,15 +1,18 @@
-package Homework5.ex3;
+package Homework6;
 
-import Homework4.Phone;
+import Homework6.Phone;
+
 
 import java.util.Scanner;
 
-public class OldPhone extends Phone {
+public class OldPhone extends Phone implements Discountable {
     private double pin;
     private String moreDescription;
 
     public OldPhone() {
     }
+
+
 
     public OldPhone(String id, String name, int price, int maintanceTime, String productor, double pin, String moreDescription) {
         super(id, name, price, maintanceTime, productor);
@@ -32,4 +35,16 @@ public class OldPhone extends Phone {
         System.out.println("Mo ta them: " + this.moreDescription);
     }
 
+    @Override
+    public void applyDiscount(double percentDiscount) {
+
+    }
+
+    private void setPrice(double discountPrice) {
+    }
+
+    @Override
+    public double calculateTotalPrice() {
+        return getPrice();
+    }
 }

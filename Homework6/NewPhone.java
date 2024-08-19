@@ -1,6 +1,6 @@
-package Homework5.ex3;
+package Homework6;
 
-import Homework4.Phone;
+import Homework6.Phone;
 
 import java.util.Scanner;
 
@@ -28,5 +28,11 @@ public class NewPhone extends Phone {
         super.output();
         System.out.println("So luong: " + this.number);
     }
+
+    @Override
+    public double calculateTotalPrice() {
+        return getPrice() * quatity;
+    }
+
 
 }
